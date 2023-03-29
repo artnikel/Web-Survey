@@ -1,0 +1,37 @@
+{{ define "login" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Authorization</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+        <link href="https://getbootstrap.com/docs/5.2/examples/sign-in/signin.css" rel="stylesheet">
+    </head>
+</head>
+<body>
+    <body class="text-center">
+        <main class="form-signin w-100 m-auto">
+          <form action="/authorize" method ="post">
+            <h1 class="h3 mb-3 fw-normal">Пожалуйста заполните данные:</h1>        
+            <div class="form-floating">
+              <input type="number" name="group" class="form-control" id="group" placeholder="Group:">
+              <label for="floatingInput">Группа</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" name="surname" class="form-control" id="surname" placeholder="Surname:">
+              <label for="floatingInput">Фамилия</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name:">
+                <label for="floatingInput">Имя</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary">Пройти опрос</button>
+          </form>
+     </main>   
+    </body>
+</body>
+</html>
+{{end}}
